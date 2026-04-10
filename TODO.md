@@ -1,4 +1,4 @@
-# TODO.md - Progress Tracking
+# TODO.md - Progress Tracking (BLACKBOXAI Update)
 
 ## ✅ Step 1: Create/Update README.md
 - Complete README with project overview, comparison table, run instructions.
@@ -9,20 +9,17 @@
 ## ✅ Step 3: Git Initialization
 - `git init` ✓ (repo existed)
 - `git add .` ✓
-- `git commit` ✓ "Update README.md with full project docs, add .gitignore & TODO.md"
+- `git commit` ✓ \"Update README.md with full project docs, add .gitignore & TODO.md\"
 
 ## ✅ Step 4: GitHub Ready
-- Repo clean: `git status` shows "nothing to commit"
-- **Next**: Run push commands
+- Repo clean: `git status` shows \"nothing to commit\"
+- Remote origin set ✓ https://github.com/SoraSensei15/Tugas-5-RPL-Code-Audit.git
 
-```
-git remote add origin https://github.com/SoraSensei15/Tugas-5-RPL-Code-Audit.git
-git branch -M main
-git push -u origin main
-```
+## ⏳ Step 5: GitHub CLI Authorization (In Progress)
+- Install GitHub CLI ('gh')
+- `gh auth login`
+- Verify `gh auth status`
 
-## ✅ Step 5: Complete
-- README created ✅
-- Git repo initialized & committed ✅
-- Ready for GitHub push 🎉
-
+## ⏳ Step 6: Complete
+- GitHub authorized
+- Repo fully synced 🎉

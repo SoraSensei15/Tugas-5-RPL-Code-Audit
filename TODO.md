@@ -15,11 +15,9 @@
 - Repo clean: `git status` shows \"nothing to commit\"
 - Remote origin set ✓ https://github.com/SoraSensei15/Tugas-5-RPL-Code-Audit.git
 
-## ⏳ Step 5: GitHub CLI Authorization (In Progress)
-- Install GitHub CLI ('gh')
-- `gh auth login`
-- Verify `gh auth status`
 
-## ⏳ Step 6: Complete
-- GitHub authorized
-- Repo fully synced 🎉
+
+## ✅ Step 6: Task Complete - GitHub Logout Verified
+- No active GitHub sessions (CLI or SSH)
+- Repo synced with origin: https://github.com/SoraSensei15/Tugas-5-RPL-Code-Audit.git
+- Ready for any GitHub actions 🎉

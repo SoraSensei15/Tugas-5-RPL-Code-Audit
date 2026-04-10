@@ -26,6 +26,21 @@
 5. Verify: Open Kode Perbaikan.html, type `// Function to convert image to grayscale using canvas` - Copilot should suggest code.
 6. Status: Check Copilot icon in status bar (working/authorized).
 
-## ✅ Step 7: Task Complete
-- Repo pushed successfully.
-- Copilot connected and tested 🎉
+## ✅ Step 5: Finalize Git Push
+- Pushed successfully: `git push -u origin main` ✓ (new branch main → origin/main).
+
+## 📋 Step 6: Connect VSCode to GitHub Account (for Copilot & Git Auth)
+1. VSCode → Ctrl+Shift+P → "GitHub: Sign in" → Open browser → Authorize VSCode (SoraSensei15 account).
+2. Verify: Status bar bottom-left shows GitHub avatar/initials.
+3. (Alt) Accounts → Manage → Sign in GitHub.
+
+## 📋 Step 7: Install & Connect GitHub Copilot
+1. Extensions (Ctrl+Shift+X) → "GitHub Copilot" → Install.
+2. Reload VSCode.
+3. Ctrl+Shift+P → "GitHub Copilot: Sign In" (uses VSCode GitHub auth).
+4. Test: In Kode Perbaikan.html, type `// Convert image to` → Copilot suggests grayscale canvas code.
+5. Status bar: Copilot icon active.
+
+## ✅ Step 8: Task Complete 🎉
+- VSCode connected to GitHub.
+- Copilot ready for code suggestions.

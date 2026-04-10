@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grayscale App</title>
+</head>
+<body>
+
+<h2>Upload Gambar</h2>
+<input type="file" id="f">
+<br><br>
+
+<canvas id="c"></canvas>
+
+<script>
+var f = document.getElementById("f");
+var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+
+f.onchange = function(e){
+    var file = e.target.files[0];
+    var img = new Image();
+    img.src = URL.createObjectURL(file);
+
+    img.onload = function(){
+        c.width = img.width;
+        c.height = img.height;
+        ctx.drawImage(img,0,0);
+
+        var d = ctx.getImageData(0,0,c.width,c.height);
+
+        for(var i=0;i<d.data.length;i+=4){
+            var r = d.data[i];
+            var g = d.data[i+1];
+            var b = d.data[i+2];
+
+            var x = (r+g+b)/3;
+
+            d.data[i] = x;
+            d.data[i+1] = x;
+            d.data[i+2] = x;
+        }
+
+        ctx.putImageData(d,0,0);
+    }
+}
+</script>
+
+</body>
+</html>

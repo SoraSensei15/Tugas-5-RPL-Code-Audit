@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grayscale Image Processor</title>
+</head>
+<body>
+
+<h2>Upload Gambar</h2>
+<input type="file" id="imageInput">
+<br><br>
+
+<canvas id="imageCanvas"></canvas>
+
+<script>
+const imageInput = document.getElementById("imageInput");
+const canvas = document.getElementById("imageCanvas");
+const context = canvas.getContext("2d");
+
+/**
+ * Load image from file input
+ */
+imageInput.addEventListener("change", handleImageUpload);
+
+function handleImageUpload(event) {
+    const file = event.target.files[0];
+    const image = new Image();
+    image.src = URL.createObjectURL(file);
+
+    image.onload = () => renderImage(image);
+}
+
+/**
+ * Draw image and convert to grayscale
+ */
+function renderImage(image) {
+    canvas.width = image.width;
+    canvas.height = image.height;
+
+    context.drawImage(image, 0, 0);
+
+    const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+    convertToGrayscale(imageData);
+    context.putImageData(imageData, 0, 0);
+}
+
+/**
+ * Convert RGB pixels to grayscale
+ */
+function convertToGrayscale(imageData) {
+    const pixels = imageData.data;
+
+    for (let i = 0; i < pixels.length; i += 4) {
+        const red = pixels[i];
+        const green = pixels[i + 1];
+        const blue = pixels[i + 2];
+
+        const gray = calculateGray(red, green, blue);
+
+        pixels[i] = gray;
+        pixels[i + 1] = gray;
+        pixels[i + 2] = gray;
+    }
+}
+
+/**
+ * Calculate grayscale value
+ */
+function calculateGray(r, g, b) {
+    return (r + g + b) / 3;
+}
+</script>
+
+</body>
+</html>
